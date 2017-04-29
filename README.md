@@ -1,3 +1,2 @@
 # gogogo
-:D Spoof GPS; simulate transit. :ghost: Just tell where you would like to Go.
-
+Spoof GPS; simulate transit. :ghost: Just say where would you like to Go. :ghost:
