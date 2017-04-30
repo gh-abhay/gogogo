@@ -1,0 +1,8 @@
+flask==0.10
+pyjade
+sqlalchemy
+gevent
+requests
+configparser
+livereload
+neo4j-driver
