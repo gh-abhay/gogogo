@@ -4,5 +4,4 @@ sqlalchemy
 gevent
 requests
 configparser
-livereload
-neo4j-driver
+MySQL-Python==1.2.5
