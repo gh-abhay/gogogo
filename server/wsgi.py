@@ -22,4 +22,4 @@ app = create_wsgi_app(config=conf, controllers=controllers)
 init_schemas(schemas, app._DS['default'])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=2502, debug=True)
+    app.run(host='0.0.0.0', port=2501, debug=True)
