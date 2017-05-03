@@ -6,3 +6,19 @@ nav.navbar.navbar-fixed-bottom.navbar-default
         button.btn.btn-default.btn-sm(style='margin-top: 8px;', data-ng-click='refreshCurrentLocation()')
           span.glyphicon.glyphicon-repeat
           | &nbsp; Refresh Location
+      .col-md-4
+        .input-group.input-group-sm(style='margin-top: 8px;')
+          .input-group-addon Speed
+          input.form-control(type='number', data-ng-model='settings.speed', step='0.05')
+          .input-group-addon Km/Hr
+      .col-md-4
+        h4.pull-left(data-ng-show='transit.ready')
+          span(data-ng-bind='transit.distance')
+          span &nbsp;Km
+        .btn-group.btn-group-sm.pull-right(style='margin-top: 8px;')
+          button.btn.btn-default(data-ng-class='{disabled: !transit.in_transit}', data-ng-click='pauseTransit()')
+            span.glyphicon.glyphicon-pause
+          button.btn.btn-default(data-ng-class='{disabled: transit.in_transit || !transit.ready}', data-ng-click='startTransit()')
+            span.glyphicon.glyphicon-play
+          button.btn.btn-default(data-ng-class='{disabled: !transit.in_transit}', data-ng-click='stopTransit()')
+            span.glyphicon.glyphicon-stop

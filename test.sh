@@ -1,0 +1,3 @@
+gps getstatus
+gps getstatus
+

@@ -9,6 +9,7 @@ from flask import jsonify
 from flask import request
 import json
 import subprocess
+from tempfile import NamedTemporaryFile
 
 
 __author__ = "Abhay Arora ( @dumbstark )"
@@ -43,6 +44,11 @@ def gps_update():
     except:
         return jsonify(dict(status='ERROR',
                             error='Could not parse JSON!'))
-    subprocess.check_output(create_command(['gps setlatitude ' + str(data.get('lat', ''))]))
-    subprocess.check_output(create_command(['gps setlongitude ' + str(data.get('lng', ''))]))
+    script = NamedTemporaryFile(delete=False)
+    script.write('gps setlatitude ' + str(data.get('lat', '')))
+    script.write('\ngps setlongitude ' + str(data.get('lng', '')))
+    script.close()
+    subprocess.check_output([app._CONF.get('genymotion', 'genyshell_path'),
+                             '-f',
+                             script.name])
     return jsonify(dict(status='SUCCESS'))
