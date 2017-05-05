@@ -2,14 +2,22 @@
 nav.navbar.navbar-fixed-bottom.navbar-default
   .container
     .row
-      .col-md-4
+      .col-md-5
         button.btn.btn-default.btn-sm(style='margin-top: 8px;', data-ng-click='refreshCurrentLocation()')
-          span.glyphicon.glyphicon-repeat
+          span.glyphicon.glyphicon-refresh
           | &nbsp; Refresh Location
-      .col-md-4
+        button.btn.btn-default.btn-sm(style='margin-top: 8px;', data-ng-click='saveCurrentLocation()')
+          span.glyphicon.glyphicon-floppy-disk
+          | &nbsp;
+          span(data-ng-bind='saveLocationTitle')
+        button.btn.btn-default.btn-sm(style='margin-top: 8px;', data-ng-click='injectSavedLocation()')
+          span.glyphicon.glyphicon-open
+          | &nbsp; 
+          span(data-ng-bind='loadLocationTitle')
+      .col-md-3
         .input-group.input-group-sm(style='margin-top: 8px;')
           .input-group-addon Speed
-          input.form-control(type='number', data-ng-model='settings.speed', step='0.05')
+          input.form-control(data-ng-disabled='transit.in_transit', type='number', data-ng-model='settings.speed', step='0.05')
           .input-group-addon Km/Hr
       .col-md-4
         h4.pull-left(data-ng-show='transit.ready')
