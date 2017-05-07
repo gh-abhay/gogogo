@@ -1,6 +1,7 @@
 gogogo
 ======
 Spoof GPS; simulate transit. :ghost: Where would you like to Go. :ghost:
+![GoGoGo](http://i.giphy.com/cpF4AiOo2Z212.gif)
 
 
 # Contributors
