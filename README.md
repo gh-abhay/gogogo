@@ -19,7 +19,7 @@ Using gogogo with Genymotion
 For using gogogo with Genymotion; follow installation instructions at [Genymotion installation guide](https://docs.genymotion.com/Content/01_Get_Started/Installation.htm)   
    
 Update configuration  
-Set database settings, Google Maps API key and path to Genymotion binaries.   
+Edit configuration file `server/gogogo.ini` and set database settings, Google Maps API key and path to Genymotion binaries.   
 ```
 #
 # Configuration Settings
