@@ -58,4 +58,7 @@ Contributors
 
 License
 -------
-Copyright © 2016, Abhay Arora. Licensed under [BSD License](LICENSE).
+gogogo is licensed under the Apache License, Version 2.0. See
+[LICENSE](https://github.com/BzFTMxc/gogogo/blob/master/LICENSE) for the full
+license text.
+
